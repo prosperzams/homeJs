@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/job.css">
+    <title>Emploi</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand px-5 py-3 fw-bold text-light" href="#">JobiConnect</a>
+          
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+            <div class="offcanvas offcanvas-end bg-success" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">JobiConnect</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-light" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-light" href="#list-offer">List offer</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-light" href="#postulate">Add profile</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+      
+    <div class="container-fluid mt-5">
+        <section id="list-offer">
+            <h2 class="text-center">Liste des offres d'emploi</h2>
+            <div id="alert-container"></div>
+            <div id="job-list" class="row-list"></div>
+        </section>
+        <section id="profil-view" class="p-3">
+            <div id="profilePreview" class="row-profile"></div>
+        </section>
+    </div>
+    <div class="container position-relative mt-4">
+        <div class="row mb-5">
+            <div id="alert-container"></div>
+            <section id="postulate">
+                <div class="form-card mb-5">
+                    <form class="form-content bg-light p-5 rounded shadow-lg" id="addProfile">
+                        <h2 class="text-center mb-4">Ajouter mon profil</h2>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Votre nom complet" id="nom">
+                            <span class="errorNom" style="color: red;"></span>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Vos competences" id="competences"></textarea>
+                            <span class="errorComp" style="color: red;"></span>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Votre experience" id="experience"></textarea>
+                            <span class="errorExp" style="color: red;"></span>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Email" id="contact">
+                            <span class="errorCont" style="color: red;"></span>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Envoyer</button>
+                    </form>
+
+                    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="applyModalLabel">Postuler pour l'offre</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="apply-form">
+                                        <div class="mb-3">
+                                            <label for="apply-job-title" class="form-label">Métier</label>
+                                            <input type="text" class="form-control" id="apply-job-title" disabled>
+                                        </div>
+                                        <!-- Champs pour le nom, email, etc. -->
+                                        <button type="submit" class="btn btn-warning w-100">Envoyer</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="/js/localProfil.js"></script>
+    <script src="/js/sendProfil.js"></script>
+    <script src="/js/viewEmploy.js"></script>
+</body>
+</html>

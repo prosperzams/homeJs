@@ -1,0 +1,104 @@
+/* Basic styles */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+#list-offer{
+    margin-top: 100px;
+}
+
+.row-list::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Cards alignment */
+#job-list {
+    display: flex;
+    flex-wrap: nowrap;  /* Empêche le retour à la ligne, les cartes restent sur la même ligne */
+    overflow-x: auto;   /* Permet de faire défiler horizontalement */
+    gap: 10px;          /* Espacement entre les cartes */
+    padding: 20px;      /* Padding autour des cartes */
+}
+
+.card {
+    min-width: 300px; /* Fixed minimum width for each card */
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease;  /* Effet de transition pour le survol */
+}
+
+/* Remove the direction buttons */
+.btn-scroll {
+    display: none; /* Cache les boutons */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Effet au survol des cartes */
+}
+
+.card-img-top {
+    width: 100%;  /* Hauteur de l'image */
+    height: 100%;    /* S'adapte à la largeur de la carte */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.card-text {
+    color: #fff;
+    text-align: center;
+}
+
+.more-info-btn {
+    background: #fdf91d;
+    color: #333;
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.apply-btn {
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.form-content{
+    margin: auto;
+    width: 700px;
+}
+.emptyText{
+    align-items: center;
+    text-align: center;
+}
+@media (max-width: 750px) {
+    .card {
+        min-width: 250px;  /* Cartes plus petites sur mobile */
+    }
+
+    #job-list {
+        gap: 5px;  /* Espacement réduit sur les petits écrans */
+    }
+
+    .card-img-top {
+        height: 12rem; /* Ajustement de la taille de l'image sur mobile */
+    }
+    .form-content{
+        margin: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,43 @@
+.navbar{
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    border: none;
+}
+
+.logo{
+    font-size: 1.9rem;
+    font-weight: bold;
+    padding: 30px;
+    color: white;
+    margin-left: 40%;
+}
+
+.card-about{
+    margin-top: 100px;
+    color: white;
+    text-align: justify;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.title-about{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.learn{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 750px) {
+    .logo{
+        margin-left: 20%;
+    }
+}
+
+body{
+    margin: 0;
+    font-family: arial,sans-serif;
+}

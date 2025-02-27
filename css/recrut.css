@@ -1,0 +1,103 @@
+/* Section des Profils Recrutés */
+#recruited-profiles .recrut {
+    display: flex;
+    overflow-x: auto;  /* Permet le défilement horizontal */
+    scroll-behavior: smooth;  /* Effet de défilement fluide */
+    padding: 10px 0;  /* Espacement autour de la liste */
+}
+
+#profilePreview {
+    display: flex;
+    flex-wrap: nowrap;  /* Empêche les cartes de revenir à la ligne */
+    gap: 20px;  /* Ajoute un espacement entre les cartes */
+}
+
+.card {
+    min-width: 300px; /* Largeur minimale des cartes */
+    margin: 10px;
+    border: none;
+}
+.empty{
+    justify-content: center;
+    margin: auto;
+}
+.recrut::-webkit-scrollbar {
+    display: none; /* Cacher la barre de défilement */
+}
+
+/* Formulaire */
+#recrut-form {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.form-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    margin: auto;
+    width: 45rem; /* Taille initiale du formulaire */
+}
+
+.form-card h5 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.form-card .form-control {
+    border-radius: 5px;
+}
+
+.form-card button {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+    .form-card {
+        width: 100%; /* Pleine largeur pour les petits écrans */
+        margin: 20px 0;
+    }
+
+    .card {
+        min-width: 250px; /* Cartes plus petites pour les écrans plus petits */
+        border: none;
+    }
+}
+
+.coso {
+    position: center;
+    bottom: 0;
+    padding: 7px;
+}
+
+.card-img-top {
+    height: 15rem;
+    width: 100%;
+}
+
+.scroll-button {
+    text-align: center;
+    margin-bottom: 10px;
+    z-index: 20;
+}
+p.card-text{
+    color: white;
+    font-size: 0.8rem;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
+h5.card-title{
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+#recruited-profiles{
+    margin-top: 140px;
+}

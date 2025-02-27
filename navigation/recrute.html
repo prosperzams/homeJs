@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/recrut.css">
+    <title>Recrute</title>
+</head>
+<body class="body">
+    <nav class="navbar bg-success navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand px-5 py-3 fw-bold text-light" href="#">JobiConnect</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-end bg-success" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">JobiConnect</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-light" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-light" href="#list-offer">List of candidate</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-light" href="#postulate">Add offer</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-warning" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <section id="recruited-profiles">
+            <h2 class="text-center">Profils disponibles</h2>
+            <div id="profilePreview"></div>
+        </section>
+    </div>
+
+    <div class="container position-relative mt-4">
+        <div class="row mb-5">
+            <section id="postulate">
+                <div id="alert-container" class="container mt-3"></div>
+
+                <div class="form-card shadow mt-5 mb-5">
+                    <h5 class="text-center text-dark mt-5 mb-4">Ajouter une offre.</h5>
+                    <form id="addOfferForm" class="form-content">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nom de la compagnie" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Titre du poste" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Laissez une description du poste" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Votre contact" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Ajouter</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="/js/renderProfile.js"></script>
+    <script src="/js/addEmploy.js"></script>
+</body>
+</html>

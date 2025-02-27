@@ -1,0 +1,81 @@
+.row-profile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 20px;
+}
+
+.row-profile::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-item {
+    min-width: 300px;
+    border: none;
+}
+
+.profile-img {
+    height: 300px;
+}
+
+.line-start {
+    justify-content: center;
+    margin: auto;
+}
+
+.profile-body .btn {
+    margin-top: 10px;
+    width: 100%; /* Pour faire en sorte que les boutons occupent toute la largeur */
+    text-align: center; /* Centrer le texte des boutons */
+}
+
+/* Media Queries pour gérer la responsivité */
+
+/* Pour les écrans plus petits (mobiles) */
+@media (max-width: 600px) {
+    .row-profile {
+        flex-direction: column; /* Aligne les éléments en colonne */
+        gap: 20px; /* Espace entre les éléments */
+    }
+
+    .profile-item {
+        min-width: 100%; /* Les éléments occupent toute la largeur de l'écran */
+    }
+
+    .profile-img {
+        height: 200px; /* Réduit la hauteur de l'image sur mobile */
+    }
+}
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+    .row-profile {
+        flex-direction: row; /* Aligne les éléments en ligne */
+        gap: 15px;
+    }
+
+    .profile-item {
+        min-width: 45%; /* Les éléments occupent 45% de la largeur, permettant 2 éléments par ligne */
+    }
+
+    .profile-img {
+        height: 250px; /* Ajuste la taille de l'image */
+    }
+}
+
+/* Pour les écrans de bureau (grands écrans) */
+@media (min-width: 1024px) {
+    .row-profile {
+        gap: 20px; /* Espacement plus large pour les grands écrans */
+    }
+
+    .profile-item {
+        min-width: 300px; /* Taille standard pour les éléments sur grands écrans */
+    }
+
+    .profile-img {
+        height: 300px; /* Taille normale de l'image */
+    }
+}

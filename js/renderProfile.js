@@ -13,7 +13,7 @@ window.onload = function() {
 
             profileCard.innerHTML = `
                 <div class="card">
-                    <img src="/images/univer.jpg" class="card-img-top" alt="Photo de profil">
+                    <img src="/images/offre.png" class="card-img-top" alt="Photo de profil">
                     <div class="card-body bg-success">
                         <h5 class="card-title">${profile.nom}</h5>
                         <p class="card-text"><strong>Compétences:</strong> ${profile.competences}</p>
